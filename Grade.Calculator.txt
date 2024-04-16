@@ -1,0 +1,32 @@
+package ArryasDemo.java;
+
+import java.util.Scanner;
+
+public class Scanner_Gradecalculator {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("How many subject do you have?: ");
+		int numSubjects = in .nextInt();
+		
+		int[] scores = new int[numSubjects];
+		
+		for (int i = 0; i < numSubjects; i++) {
+			System.out.println("Enter the score for subject: " + (i + 1) );
+			scores[i] = in.nextInt();
+			
+		}
+
+		int totalScores = 0;
+		for (int score : scores) {
+			totalScores += score;
+			
+		}
+		
+		double averageGrade = (double) totalScores / numSubjects;
+		 System.out.println("Average grade is: " + averageGrade);
+		
+	}
+
+}
